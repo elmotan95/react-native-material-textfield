@@ -10,7 +10,7 @@
 [rn-textinput]: https://facebook.github.io/react-native/docs/textinput.html#props
 [md-textfield]: https://material.io/guidelines/components/text-fields.html
 
-# react-native-material-textfield
+# react-native-material-textfield-plus (updated version of react-native-material-textfield)
 
 [![npm][npm-badge]][npm-url]
 [![license][license-badge]][license-url]
@@ -41,7 +41,7 @@ Material texfield with consistent behaviour on iOS and Android
 ## Installation
 
 ```bash
-npm install --save react-native-material-textfield
+npm install --save react-native-material-textfield-plus
 ```
 
 ## Usage
@@ -52,7 +52,7 @@ import {
   TextField,
   FilledTextField,
   OutlinedTextField,
-} from 'react-native-material-textfield';
+} from 'react-native-material-textfield-plus';
 
 class Example extends Component {
   fieldRef = React.createRef();
@@ -69,6 +69,20 @@ class Example extends Component {
 
   render() {
     return (
+      <TextField
+        label='Phone number'
+        keyboardType='phone-pad'
+        formatText={this.formatText}
+        onSubmitEditing={this.onSubmit}
+        ref={this.fieldRef}
+      />
+      <FilledTextField
+        label='Phone number'
+        keyboardType='phone-pad'
+        formatText={this.formatText}
+        onSubmitEditing={this.onSubmit}
+        ref={this.fieldRef}
+      />
       <OutlinedTextField
         label='Phone number'
         keyboardType='phone-pad'
@@ -162,7 +176,7 @@ Other [TextInput][rn-textinput] properties will also work.
 ## Example
 
 ```bash
-git clone https://github.com/n4kz/react-native-material-textfield
+git clone https://github.com/n4kz/react-native-material-textfield-plus
 cd react-native-material-textfield/example
 npm install
 npm run ios # or npm run android
